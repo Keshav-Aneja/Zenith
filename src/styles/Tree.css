@@ -1,0 +1,83 @@
+:root {
+  --primary: #1d5bfe;
+}
+a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: black;
+  margin-left: -1rem;
+}
+
+li {
+  display: flex;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1.5rem;
+}
+.root-list {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+/* Generates the circle icon */
+li::after {
+  content: "";
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  transform: translate(0, -50%);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* For Vertical Branches */
+.list-item:not(:first-child)::before {
+  content: "";
+  display: block;
+  width: 0.15rem;
+  height: 2.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  background: var(--primary);
+  transform: translate(180%, -55%);
+}
+
+/* For Curved Leafs */
+.list-item.list-holder::after {
+  display: none;
+}
+
+.list-item.list-holder {
+  margin-bottom: -1.4rem;
+}
+.list-item.list-holder + .list-item::before,
+.list-item.list-holder::before {
+  display: none;
+}
+
+.list-holder > .list {
+  position: relative;
+}
+
+.list-holder > .list::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 1.6rem;
+  height: 2.8rem;
+  border-bottom-left-radius: 20px;
+  border-bottom: 2px solid var(--primary);
+  border-left: 2px solid var(--primary);
+  transform: translate(-135%, -70%);
+}

@@ -1,0 +1,39 @@
+::-webkit-scrollbar {
+  width: 0em; /* Set the width of the scrollbar (you can adjust this value) */
+}
+textarea::-webkit-scrollbar,
+.todowrap::-webkit-scrollbar {
+  width: 0.1em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the thumb (scrollbar handle) */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the track (area behind the thumb) */
+}
+
+.CheckboxRoot {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+.CheckboxRoot:hover {
+  background-color: #ebebeb;
+}
+
+.CheckboxIndicator {
+  color: #1d5bfe;
+}
+
+.Label {
+  color: black;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
+}
